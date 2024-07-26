@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio</title>
+  <link rel="icon" href="img/portoicon.png" type="image/png">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
@@ -11,7 +12,6 @@
       text-align: center;
       padding: 50px 0;
       color:white;
-      /* background-color: #f8f9fa; */
     }
     .profile img {
       width: 150px;
@@ -19,232 +19,427 @@
       border-radius: 50%;
     }
     .project-card img {
-      max-height: 200px;
+      width: 100%;
+      height: 200px;
       object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .project-card img:hover {
+      transform: scale(1.05);
+    }
+    .project-card {
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
     .about-section {
       padding: 50px 0;
       color:white;
-      /* background-color: #f8f9fa; */
+      transition: transform 1s;
     }
-    header:hover{
+    
+    .about-section:hover{
+        transform: rotate(360deg);
+    }
+    header:hover {
+      background-color: black;
+      color:white;
+      transition:1.5s;
+    }
+    .embossed-text {
+      text-shadow: 1px 1px 0 #000, 
+                   2px 2px 0 #fff, 
+                   3px 3px 0 #000, 
+                   4px 4px 0 #fff; 
+    }
+    body {
+      background-image: url('img/abstract-navy-blue-digital-grid-technology-background.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+    .navbar {
       background-color: black;
       color:white;
     }
-    .embossed-text {
-      text-shadow: 1px 1px 0 #000, /* Layer 1 */
-                   2px 2px 0 #fff, /* Layer 2 */
-                   3px 3px 0 #000, /* Layer 3 */
-                   4px 4px 0 #fff; /* Layer 4 */
+    .btn:hover {
+      background-color: black;
+      color:white;
+      transition:1.2s;
     }
-    body {
-  background-image: url('img/abstract-navy-blue-digital-grid-technology-background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+    a {
+      text-decoration: none;
+    }
+    .nav-item a{
+        color:white;
+    }
+    .card a{
+        color:black;
+        
+    }
+    .card{
+        padding:15px;
+        border-radius:2%;
+    }
+    .about-section{
+      display: flex;
+      justify-content: space-between;
+    }
+    .scroll-down {
+      text-align: center;
+      margin-top: 20px;
+      cursor: pointer;
+      color: white;
+    }
+    .hidden {
+  display: none;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
-.navbar {
-     background-color: black;
-    }
+
+.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
   </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-custom">
-    <a class="navbar-brand" href="#">Portofolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white">
-      <span  class="bi bi-three-dots" style="background-color:azure;"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="profile">
-    <img src="img/bayu.JPG" alt="Your Name">
-    <h1 class="mt-3">Bayu Wisnu aji</h1>
-    <p><a href="https://github.com/bayuwisnu92" target="blank"><i class="bi bi-github"></i> github</a></p>
-    <p> Web Developer</p>
-  </div>
-
-  <header class="jumbotron text-center">
-    <h1 class="display-4 embossed-text">Fullstack Web Programmer</h1>
-    <p class="lead embossed-text" style="color:grey;">PHP, JavaScript, HTML, CSS, Bootstrap,Laravel,mysql</p>
-  </header>
-
-  <section class="about-section">
     <div class="container">
-      <h2 class="text-center"><i class="bi bi-file-person-fill"></i> About</h2>
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-8">
-          <p>Saya adalah seorang web programmer yang berpengalaman dan memiliki keahlian dalam HTML, CSS, Bootstrap, JavaScript, PHP, serta framework Laravel dan CodeIgniter. Dengan keterampilan tersebut, saya mampu menciptakan aplikasi web yang responsif, dinamis, dan sesuai kebutuhan klien. Passion saya dalam pengembangan web membuat saya terus belajar dan berinovasi untuk memberikan hasil terbaik dalam setiap proyek yang saya kerjakan.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="container my-5">
-    <h2 class="text-center mb-4" style="color:white;"><i class="bi bi-person-workspace"></i> Projects</h2>
-    <div class="row" id="project-list">
-      <!-- Projects will be inserted here by JavaScript -->
-    </div>
-  </section>
-
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-7">
-      <section id="contact" class="container my-5">
-        <h2 class="text-center" style="color:white;"><i class="bi bi-person-lines-fill"></i> Contact</h2>
-        <form >
-          <div class="form-group">
-            <label for="name">Nama</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="masukkan nama" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="masukkan email" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">No Telepon</label>
-            <input type="text" class="form-control" id="phone" name="phone" placeholder="masukkan no telepon" required>
-          </div>
-          <div class="form-group">
-            <label for="category">Kategori</label>
-            <select class="form-control" id="category" name="category" required>
-              <option value="">-- Pilih Kategori --</option>
-              <option value="Web Development">Web Development</option>
-              <option value="Mobile Development">Mobile Development</option>
-              <option value="Consulting">Consulting</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Pesan</label>
-            <textarea class="form-control" id="message" name="message" rows="4" placeholder="masukkan pesan" required></textarea>
-          </div>
-          <button type="submit" class="badge btn btn-dark btn-sm">Kirim Pesan <i class="bi bi-send"></i></button>
-        </form>
-      </section>
-    </div>
+        <img src="img/portoicon.png" width="20px">
+  <a class="navbar-brand text-white" href="#">Portofolio</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white">
+    <span class="bi bi-three-dots" style="background-color:azure;"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
   </div>
+        
+    </div>
+</nav>
 
-  <!-- Modal Structure -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p id="modal-description">...</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          
-        </div>
+<div class="profile">
+  <img src="img/bayu.JPG" alt="Your Name">
+  <h1 class="embossed-text mt-3">Bayu Wisnu aji</h1>
+  <p><a href="https://github.com/bayuwisnu92" target="blank"><i class="bi bi-github"></i> github</a></p>
+  <p> Web Developer</p>
+</div>
+
+<header class="jumbotron text-center">
+  <h1 class="display-4 embossed-text">Fullstack Web Programmer</h1>
+  <p class="lead embossed-text" style="color:grey;">PHP, JavaScript, HTML, CSS, Bootstrap, Laravel, MySQL</p>
+</header>
+<a href="#about"></a>
+<div class="scroll-down">
+  <i class="bi bi-chevron-down"></i>
+  <p>More</p></a>
+</div>
+<section class="about-section hidden" id="about">
+  <div class="container">
+    <h2 class="text-center"><i class="bi bi-file-person-fill"></i> About</h2>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-8">
+        <p>Saya adalah seorang web programmer yang berpengalaman dan memiliki keahlian dalam HTML, CSS, Bootstrap, JavaScript, PHP, serta framework Laravel dan CodeIgniter. Dengan keterampilan tersebut, saya mampu menciptakan aplikasi web yang responsif, dinamis, dan sesuai kebutuhan klien. Passion saya dalam pengembangan web membuat saya terus belajar dan berinovasi untuk memberikan hasil terbaik dalam setiap proyek yang saya kerjakan.</p>
       </div>
     </div>
   </div>
+</section>
 
-  <footer class="bg-light text-center py-4">
-    <p>Contact me at: <a href="bayuwisnu9294@gmail.com">bayuwisnu9294@gmail.com</a></p>
-    <p>&copy;  | built with <span style="color: red;">&#10084;</span> by Bayu wisnu aji.</p>
-  </footer>
+<section id="projects" class="container my-5 hidden">
+  <h2 class="text-center mb-4" style="color:white;"><i class="bi bi-person-workspace"></i> Projects</h2>
+  <div class="row" id="project-list">
+    <!-- Projects will be inserted here by JavaScript -->
+  </div>
+  <div id="project-list" class="row"></div>
+<nav>
+  <ul class="pagination justify-content-center" id="pagination">
+  </ul>
+</nav>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    const projects = [
-    {
-        title: "Portofolio",
-        image: "img/porto.png",
-        technologies: ["html", "css", "JavaScript","bootstrap"],
-        link: "https://bayuwisnu92.github.io/portofolio_Bayu_wisnu_aji/",
-        git : "https://github.com/bayuwisnu92/portofolio_Bayu_wisnu_aji",
-        description: "Web portofolio yang yang menyimpan semua apa yang sudah dikerjakan,"
-      },
-      {
-        title: "Aplikasi web cv maker",
-        image: "img/make_cv.1.png",
-        technologies: ["html", "css", "JavaScript","bootstrap"],
-        link: "https://bayuwisnu92.github.io/cv_maker/",
-        git : "https://github.com/bayuwisnu92/cv_maker",
-        description: "Ini adalah aplikasi web untuk membuat CV online dengan berbagai template menarik.user dapat menulis sendiri profil yang dibutuhkan untuk cvnya sendiri link {https://bayuwisnu92.github.io/cv_maker/},"
-      },
-      {
-        title: "website jual madu",
-        image: "img/jualmadu.png",
-        technologies: ["html","css", "Bootstrap", "JavaScript"],
-        link: "https://bayuwisnu92.github.io/madu-melifera/",
-        git : "https://github.com/bayuwisnu92/madu-melifera",
-        description: "Website ini dibuat untuk menjual berbagai jenis madu berkualitas tinggi.dipanen dari peternakan lebah penghasil madu yang ada di sumatera yang dijamin keaslian kemuarniannya"
-      },
-      {
-        title: "cv online",
-        image: "img/cv_online.png",
-        technologies: ["html","css", "Bootstrap", "JavaScript"],
-        link: "https://bayuwisnu92.github.io/cv-bayu-wisnu/",
-        git : "https://github.com/bayuwisnu92/cv-bayu-wisnu",
-        description: "Sebuah CV online yang menampilkan informasi pribadi dan portofolio pekerjaan."
-      },
-      {
-        title: "pencarian movie",
-        image: "img/movie.png",
-        technologies: ["html","css", "Bootstrap", "JavaScript","AJAX"],
-        link: "https://bayuwisnu92.github.io/search-movie/",
-        git : "https://github.com/bayuwisnu92/search-movie",
-        description: "Aplikasi web untuk mencari informasi tentang berbagai film menggunakan API eksternal."
-      },
-      {
-        title: "aplikasi quran android",
-        image: "img/quran android.jpg",
-        technologies: ["flutter","dart"],
-        link: "https://github.com/bayuwisnu92/aplikasi-quran-flutter",
-        git : "https://github.com/bayuwisnu92/aplikasi-quran-flutter",
-        description: "Aplikasi Android untuk membaca Al-Quran dengan berbagai fitur menarik."
-      }
-    ];
+</section>
 
-    function renderProjects() {
-      const projectList = document.getElementById('project-list');
-      projects.forEach(project => {
-        const projectCard = document.createElement('div');
-        projectCard.classList.add('col-md-4', 'project-card', 'mb-4');
-        projectCard.innerHTML = `
-          <div class="card">
-            <img src="${project.image}" class="card-img-top" alt="${project.title}">
-            <div class="card-body">
-              <h5 class="card-title">
-              <a href="#" class="see-detail" data-toggle="modal" data-target="#exampleModal" data-title="${project.title}" data-description="${project.description}"><i class="bi bi-three-dots"></i> ${project.title}</a>
-              </h5>
-              <hr>
-              <p class="card-text"><strong>Technologies</strong>: ${project.technologies.join(', ')}</p>
-                <p><a href="${project.git}" target="blank"><i class="bi bi-github"></i> github</a></p>
-              <hr>
-              
-              <a href="${project.link}" target="blank" class="badge btn btn-dark btn-sm d-inline"><i class="bi bi-eye"></i> View Project</a><br>
-              
+<div class="row d-flex justify-content-center hidden" style="color:white;">
+  <div class="col-md-6">
+    <section id="contact" class="container my-5">
+      <h2 class="text-center" style="color:white;"><i class="bi bi-person-lines-fill"></i> Contact</h2>
+      <form action="sendEmail.php" method="POST">
+        <div class="form-group">
+          <label for="name">Nama</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="masukkan nama" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="masukkan email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">No Telepon</label>
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="masukkan no telepon" required>
+        </div>
+        <div class="form-group">
+          <label for="category">Kategori</label>
+          <select class="form-control" id="category" name="category" required>
+            <option value="">-- Pilih Kategori --</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Mobile Development">Mobile Development</option>
+            <option value="Consulting">Consulting</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Pesan</label>
+          <textarea class="form-control" id="message" name="message" rows="4" placeholder="masukkan pesan" required></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn Kirim" style="border: white solid 1px;color:white">Kirim Pesan <i class="bi bi-send"></i></button>
+        </div>
+      </form>
+    </section>
+  </div>
+  
+</div>
+<div class="container text-center hidden">
+    <p class="text-white">#<span style="color:red;">catatan:</span> Ini Fungsi kirim pesannya jalan loh .. coba aja kirim!!</p>
+</div>
+
+<!-- Modal Structure -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-description">...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<footer class="bg-dark text-center py-4 text-white hidden">
+  <p>Contact me at: <a href="mailto:bayuwisnu9294@gmail.com">bayuwisnu9294@gmail.com</a></p>
+  <p>Address: Jalan Rancakasiat, Komplek Perumahan Pesona Rancamulya Blok H</p>
+  <p>Phone: 083806620512</p>
+  <p>&copy; | built with <span style="color: red;">&#10084;</span> by Bayu Wisnu Aji.</p>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+const projects = [
+  {
+    label: "APi with Laravel 11",
+    title: "API with Laravel 11",
+    image: "img/webapi.jpg",
+    technologies: ["Laravel 11", "PHP.8", "mysql"],
+    codeeditor: 'Visual Studio Code',
+    link: "https://github.com/bayuwisnu92/API-with-Laravel",
+    git: "https://github.com/bayuwisnu92/API-with-Laravel",
+    description: "1. Install Laravel via Composer. 2. Configure environment settings. 3. Set up database and run migrations. 4. Create models, controllers, and views for posts. 5. Implement authentication and authorization. 6. Design frontend with Blade and Bootstrap. 7. Add CRUD functionality for posts. 8. Deploy application on a hosting service."
+  },
+  {
+    label: "Blog with Laravel",
+    title: "Blog with Laravel",
+    image: "img/blog.png",
+    technologies: ["Laravel", "html", "css", "JavaScript", "bootstrap", "mysql"],
+    codeeditor: 'Visual Studio Code',
+    link: "https://github.com/bayuwisnu92/Blog-dengan-Laravel",
+    git: "https://github.com/bayuwisnu92/Blog-dengan-Laravel",
+    description: "1. Install Laravel via Composer. 2. Configure environment settings. 3. Set up database and run migrations. 4. Create models, controllers, and views for posts. 5. Implement authentication and authorization. 6. Design frontend with Blade and Bootstrap. 7. Add CRUD functionality for posts. 8. Deploy application on a hosting service."
+  },
+  {
+    label: "Portofolio",
+    title: "Portofolio",
+    codeeditor: 'Visual Studio Code',
+    image: "img/porto.png",
+    technologies: ["html", "css", "JavaScript", "bootstrap"],
+    link: "https://portofolio-bayuwisnuaji.000webhostapp.com/",
+    git: "https://bayuwisnu92.github.io/portofolio_Bayu_wisnu_aji/",
+    description: "Ini adalah aplikasi web untuk membuat CV online dengan berbagai template menarik.user dapat menulis sendiri profil yang dibutuhkan untuk cvnya sendiri link {https://bayuwisnu92.github.io/cv_maker/},"
+  },
+  {
+    label: "cv_maker",
+    title: "Aplikasi web cv maker",
+    codeeditor: 'Visual Studio Code',
+    image: "img/make_cv.1.png",
+    technologies: ["html", "css", "JavaScript", "bootstrap"],
+    link: "https://bayuwisnu92.github.io/cv_maker/",
+    git: "https://github.com/bayuwisnu92/cv_maker",
+    description: "Ini adalah aplikasi web untuk membuat CV online dengan berbagai template menarik.user dapat menulis sendiri profil yang dibutuhkan untuk cvnya sendiri link {https://bayuwisnu92.github.io/cv_maker/},"
+  },
+  {
+    label: "web_jualan",
+    title: "website jual madu",
+    codeeditor: 'Visual Studio Code',
+    image: "img/jualmadu.png",
+    technologies: ["html", "css", "Bootstrap", "JavaScript"],
+    link: "https://bayuwisnu92.github.io/madu-melifera/",
+    git: "https://github.com/bayuwisnu92/madu-melifera",
+    description: "Website ini dibuat untuk menjual berbagai jenis madu berkualitas tinggi.dipanen dari peternakan lebah penghasil madu yang ada di sumatera yang dijamin keaslian kemuarniannya"
+  },
+  {
+    label: "Cv",
+    title: "cv online",
+    codeeditor: 'Visual Studio Code',
+    image: "img/cv_online.png",
+    technologies: ["html", "css", "Bootstrap", "JavaScript"],
+    link: "https://bayuwisnu92.github.io/cv-bayu-wisnu/",
+    git: "https://github.com/bayuwisnu92/cv-bayu-wisnu",
+    description: "Sebuah CV online yang menampilkan informasi pribadi dan portofolio pekerjaan."
+  },
+  {
+    label: "Cari_movie",
+    title: "pencarian movie",
+    codeeditor: 'Visual Studio Code',
+    image: "img/movie.png",
+    technologies: ["html", "css", "Bootstrap", "JavaScript", "AJAX"],
+    link: "https://bayuwisnu92.github.io/search-movie/",
+    git: "https://github.com/bayuwisnu92/search-movie",
+    description: "Aplikasi web untuk mencari informasi tentang berbagai film menggunakan API eksternal."
+  },
+  {
+    label: "Quran_android",
+    title: "aplikasi quran android",
+    codeeditor: 'Visual Studio Code',
+    image: "img/quran android.jpg",
+    technologies: ["flutter", "dart"],
+    link: "https://github.com/bayuwisnu92/aplikasi-quran-flutter",
+    git: "https://github.com/bayuwisnu92/aplikasi-quran-flutter",
+    description: "Aplikasi Android untuk membaca Al-Quran dengan berbagai fitur menarik."
+  },
+  {
+    label: "cv probadi apk flutter",
+    title: "cv with flutter",
+    codeeditor: 'Visual Studio Code',
+    image: "img/cv-android.jpg",
+    technologies: ["flutter", "dart"],
+    link: "https://github.com/bayuwisnu92/cv-aplikasi-flutter",
+    git: "https://github.com/bayuwisnu92/cv-aplikasi-flutter",
+    description: "1. Install Flutter SDK dan siapkan editor. 2. Buat proyek baru dengan 'flutter create'. 3. Desain tampilan CV menggunakan widget Flutter. 4. Tambahkan navigasi untuk halaman CV dan detail. 5. Implementasikan fitur edit dan simpan data. 6. Integrasikan penyimpanan lokal dengan SQLite atau Shared Preferences. 7. Uji aplikasi pada emulator atau perangkat fisik. 8. Build APK dan deploy aplikasi."
+  }
+];
+
+const projectsPerPage = 3; // Number of projects per page
+let currentPage = 1;
+
+function renderProjects() {
+  const projectList = document.getElementById('project-list');
+  projectList.innerHTML = ''; // Clear existing projects
+
+  const start = (currentPage - 1) * projectsPerPage;
+  const end = start + projectsPerPage;
+  const paginatedProjects = projects.slice(start, end);
+
+  paginatedProjects.forEach(project => {
+    const projectCard = document.createElement('div');
+    projectCard.classList.add('col-md-4', 'project-card', 'mb-4');
+    projectCard.innerHTML = `
+      <div class="card">
+        <div class="position-absolute text-center px-3 py-2 text-white" style="background-color: rgba(0,0,0,0.5)">${project.label}</div>
+        <a href="${project.link}" target="_blank"><img src="${project.image}" class="card-img-top" alt="${project.title}"></a>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-10">
+              <h5 class="card-title">${project.title}</h5>
+            </div>
+            <div class="col-2">
+              <a href="#" class="see-detail ms-auto" data-toggle="modal" data-target="#exampleModal" data-title="${project.title}" data-description="${project.description}">
+                <i class="bi bi-three-dots-vertical"></i>
+              </a>
             </div>
           </div>
-        `;
-        projectList.appendChild(projectCard);
-      });
+          <hr>
+          <p class="card-text"><strong>Technologies</strong>: ${project.technologies.join(', ')}</p>
+          <p class="card-text"><strong>Code Editor</strong>: ${project.codeeditor}</p>
+          <p><a href="${project.git}" target="_blank"><i class="bi bi-github"></i> github</a></p>
+          <hr>
+          <a href="${project.link}" target="_blank" class="badge btn btn-sm d-inline" style="border:solid grey 0.8px"><i class="bi bi-eye"></i> View Project</a><br>
+        </div>
+      </div>
+    `;
+    projectList.appendChild(projectCard);
+  });
+
+  renderPagination();
+}
+
+function renderPagination() {
+  const pagination = document.getElementById('pagination');
+  pagination.innerHTML = ''; // Clear existing pagination
+
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  for (let i = 1; i <= totalPages; i++) {
+    const pageItem = document.createElement('li');
+    pageItem.classList.add('page-item');
+    if (i === currentPage) {
+      pageItem.classList.add('active');
     }
-
-    document.addEventListener('DOMContentLoaded', renderProjects);
-
-    $('#exampleModal').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget);
-      var title = button.data('title');
-      var description = button.data('description');
-      var modal = $(this);
-      modal.find('.modal-title').text(title);
-      modal.find('.modal-body #modal-description').text(description);
+    pageItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+    pageItem.addEventListener('click', (event) => {
+      event.preventDefault();
+      currentPage = i;
+      renderProjects();
     });
-  </script>
+    pagination.appendChild(pageItem);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', renderProjects);
+
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget);
+  var title = button.data('title');
+  var description = button.data('description');
+  var modal = $(this);
+  modal.find('.modal-title').text(title);
+  modal.find('.modal-body #modal-description').text(description);
+});
+
+// Event listener for navbar links
+$('.nav-item a').click(function() {
+  const target = $(this).attr('href');
+  $('html, body').animate({
+    scrollTop: $(target).offset().top
+  }, 1000, function() {
+    $(target).removeClass('hidden').addClass('show');
+  });
+  return false;
+});
+
+// Event listener for scroll to show content
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    $('.hidden').removeClass('hidden').addClass('show');
+  }
+});
+
+// Scroll-down arrow click event
+$('.scroll-down').click(function() {
+  $('html, body').animate({
+    scrollTop: $('.about-section').offset().top
+  }, 1000, function() {
+    $('.about-section').removeClass('hidden').addClass('show');
+  });
+});
+</script>
+
 </body>
 </html>
