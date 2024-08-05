@@ -244,6 +244,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 const projects = [
+{
+    label: "APi with Nodejs & express",
+    title: "APi Nodejs",
+    image: "img/apinodejs.jpg",
+    technologies: ["Nodejs", "javascript serverside", "javascript clientside","mongodb"],
+    codeeditor: 'Visual Studio Code',
+    link: "https://github.com/bayuwisnu92/API-nodejs-express",
+    git: "https://github.com/bayuwisnu92/API-nodejs-express",
+    description: "1. Install Laravel via Composer. 2. Configure environment settings. 3. Set up database and run migrations. 4. Create models, controllers, and views for posts. 5. Implement authentication and authorization. 6. Design frontend with Blade and Bootstrap. 7. Add CRUD functionality for posts. 8. Deploy application on a hosting service."
+  },
   {
     label: "APi with Laravel 11",
     title: "API with Laravel 11",
@@ -351,7 +361,7 @@ function renderProjects() {
     const projectCard = document.createElement('div');
     projectCard.classList.add('col-md-4', 'project-card', 'mb-4');
     projectCard.innerHTML = `
-      <div class="card">
+      <div class="card" style="width:320px;height:"100px">
         <div class="position-absolute text-center px-3 py-2 text-white" style="background-color: rgba(0,0,0,0.5)">${project.label}</div>
         <a href="${project.link}" target="_blank"><img src="${project.image}" class="card-img-top" alt="${project.title}"></a>
         <div class="card-body">
@@ -365,12 +375,20 @@ function renderProjects() {
               </a>
             </div>
           </div>
-          <hr>
           <p class="card-text"><strong>Technologies</strong>: ${project.technologies.join(', ')}</p>
           <p class="card-text"><strong>Code Editor</strong>: ${project.codeeditor}</p>
-          <p><a href="${project.git}" target="_blank"><i class="bi bi-github"></i> github</a></p>
-          <hr>
-          <a href="${project.link}" target="_blank" class="badge btn btn-sm d-inline" style="border:solid grey 0.8px"><i class="bi bi-eye"></i> View Project</a><br>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="col-6">
+              <p><a href="${project.git}" target="_blank"><i class="bi bi-github"></i> github</a></p>
+              </div>
+              <div class="col-6">
+                  <a href="${project.link}" target="_blank" class="badge btn btn-sm d-inline" style="border:solid grey 0.8px"><i class="bi bi-eye"></i> View Project</a>
+                </div>
+            
+            </div>
+          
+          
+          
         </div>
       </div>
     `;
