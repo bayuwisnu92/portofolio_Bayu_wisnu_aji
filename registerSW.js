@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/portofolio_Bayu_wisnu_aji/sw.js', { scope: '/portofolio_Bayu_wisnu_aji/' })})}
