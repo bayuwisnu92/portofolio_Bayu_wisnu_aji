@@ -93,8 +93,10 @@ Error generating stack: `+i.message+`
                 }
             `})]})}function Vf(){return p.jsxs(p.Fragment,{children:[p.jsxs("div",{className:"profile",children:[p.jsx("img",{src:"img/bayu.JPG",alt:"Bayu Wisnu Aji",className:"rounded-circle shadow",style:{width:"150px",height:"150px",objectFit:"cover"}}),p.jsx("h1",{className:"mt-3 embossed-text",style:{fontSize:"2rem",fontWeight:"bold"},children:"Bayu Wisnu Aji"}),p.jsx("p",{children:p.jsxs("a",{href:"https://github.com/bayuwisnu92",target:"_blank",rel:"noopener noreferrer",className:"text-warning text-decoration-none",children:[p.jsx("i",{className:"bi bi-github me-2"})," GitHub"]})}),p.jsx("p",{className:"fs-4",children:"Web Developer"})]}),p.jsx("style",{jsx:"true",children:`
                 .profile {
+                    background-color: #012C56;
+                    
                     text-align: center;
-                    padding: 50px 0;
+                    padding: 50px 50px 70px 50px;
                     color: white;
                 }
                 .profile img {
@@ -136,7 +138,7 @@ Error generating stack: `+i.message+`
                         font-size: 0.9rem;
                     }
                 }
-            `})]})}function Wf({header:e}){return p.jsxs("div",{className:`${e}`,children:[p.jsxs("header",{className:"custom-header jumbotron text-center d-flex flex-column justify-content-center align-items-center",style:{backgroundImage:"url('/img/bg-porto.jpg')",backgroundSize:"cover",backgroundPosition:"center"},children:[p.jsx("h1",{className:"display-4 embossed-text mb-3",children:"Fullstack Web Developer"}),p.jsx("p",{className:"lead tech-stack",children:"Node.js, PHP, JavaScript, HTML, CSS, Bootstrap, Laravel, MySQL, MongoDB, React.js"})]}),p.jsx("style",{jsx:"true",children:`
+            `})]})}function Wf({header:e}){return p.jsxs("div",{className:`${e} head`,children:[p.jsxs("header",{className:"custom-header jumbotron text-center d-flex flex-column justify-content-center align-items-center",style:{backgroundImage:"url('/img/bg-porto.jpg')",backgroundSize:"cover",backgroundPosition:"center"},children:[p.jsx("h1",{className:"display-4 embossed-text mb-3",children:"Fullstack Web Developer"}),p.jsx("p",{className:"lead tech-stack",children:"Node.js, PHP, JavaScript, HTML, CSS, Bootstrap, Laravel, MySQL, MongoDB, React.js"})]}),p.jsx("style",{jsx:"true",children:`
                 .custom-header {
                     background-color: #1c1c1c;
                     width: 100%;
