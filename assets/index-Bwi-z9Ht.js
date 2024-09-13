@@ -46,9 +46,12 @@ Error generating stack: `+i.message+`
                 }
 
                 .floating-btn {
-                    background-color: #012C56;
+                    background-color: #DD1B40;
                     color: white;
                     border: none;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                    
+
                     border-radius: 50%;
                     padding: 15px 20px;
                     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -82,7 +85,7 @@ Error generating stack: `+i.message+`
                     padding: 10px;
                     transition: background-color 0.3s;
                 }
-
+                
                 .floating-menu .nav-link:hover {
                     background-color: #495057;
                     border-radius: 5px;
@@ -223,4 +226,4 @@ Error generating stack: `+i.message+`
             font-size: 1rem;
           }
         }
-      `})]})}function Yf(){const[e,t]=oe.useState(!1),[n,r]=oe.useState(null),[l,i]=oe.useState("hidden"),[o,u]=oe.useState("hidden"),[s,d]=oe.useState("hidden"),[v,h]=oe.useState("show"),m=c=>{r(c),t(!0)},w=()=>{t(!1),r(null);const c=document.getElementById("exampleModal"),a=window.bootstrap.Modal.getInstance(c);a&&a.hide();const f=document.querySelector(".modal-backdrop");f&&f.remove()},k=()=>{i(c=>c==="hidden"?"show":"hidden"),u(c=>"hidden"),d(c=>"hidden"),h(c=>c==="show"?"hidden":"show")},x=()=>{u(c=>c==="hidden"?"show":"hidden"),i(c=>"hidden"),d(c=>"hidden"),h(c=>c==="show"?"hidden":"show")},I=()=>{d(c=>c==="hidden"?"show":"hidden"),i(c=>"hidden"),u(c=>"hidden"),h(c=>c==="show"?"hidden":"show")};return oe.useEffect(()=>{const c=setTimeout(()=>{h("show"),i(a=>"hidden"),u(a=>"hidden"),d(a=>"hidden")},3e4);return()=>clearTimeout(c)},[v]),p.jsxs(p.Fragment,{children:[p.jsx(ic,{aboutBut:k,projectBut:x,contactBut:I}),p.jsx(Vf,{}),p.jsx(Wf,{header:v}),p.jsx(Hf,{about:l}),p.jsx(oc,{openModal:m,proje:o}),p.jsx(Qf,{kontak:s}),e&&n&&p.jsx(uc,{title:n.title,description:n.description,onClose:w}),p.jsx(Kf,{})]})}tc(document.getElementById("root")).render(p.jsx(oe.StrictMode,{children:p.jsx(Yf,{})}));
+      `})]})}function Yf(){const[e,t]=oe.useState(!1),[n,r]=oe.useState(null),[l,i]=oe.useState("hidden"),[o,u]=oe.useState("hidden"),[s,d]=oe.useState("hidden"),[v,h]=oe.useState("show"),m=c=>{r(c),t(!0)},w=()=>{t(!1),r(null);const c=document.getElementById("exampleModal"),a=window.bootstrap.Modal.getInstance(c);a&&a.hide();const f=document.querySelector(".modal-backdrop");f&&f.remove()},k=()=>{i(c=>c==="hidden"?"show":"hidden"),u(c=>"hidden"),d(c=>"hidden"),h(c=>c==="show"?"hidden":"show")},x=()=>{u(c=>c==="hidden"?"show":"hidden"),i(c=>"hidden"),d(c=>"hidden"),h(c=>c==="show"?"hidden":"show")},I=()=>{d(c=>c==="hidden"?"show":"hidden"),i(c=>"hidden"),u(c=>"hidden"),h(c=>c==="show"?"hidden":"show")};return oe.useEffect(()=>{const c=setTimeout(()=>{h("show"),i(a=>"hidden"),u(a=>"hidden"),d(a=>"hidden")},1e4);return()=>clearTimeout(c)},[v]),p.jsxs(p.Fragment,{children:[p.jsx(ic,{aboutBut:k,projectBut:x,contactBut:I}),p.jsx(Vf,{}),p.jsx(Wf,{header:v}),p.jsx(Hf,{about:l}),p.jsx(oc,{openModal:m,proje:o}),p.jsx(Qf,{kontak:s}),e&&n&&p.jsx(uc,{title:n.title,description:n.description,onClose:w}),p.jsx(Kf,{})]})}tc(document.getElementById("root")).render(p.jsx(oe.StrictMode,{children:p.jsx(Yf,{})}));
