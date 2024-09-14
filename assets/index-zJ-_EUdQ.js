@@ -200,7 +200,7 @@ Error generating stack: `+i.message+`
           box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
           background-color: #1c1c1c; /* Ganti background menjadi gelap */
           color: white; /* Ubah warna teks menjadi putih */
-          height: 200px; /* Tinggi footer menjadi 200px */
+          height: 250px; /* Tinggi footer menjadi 200px */
           
         }
 
